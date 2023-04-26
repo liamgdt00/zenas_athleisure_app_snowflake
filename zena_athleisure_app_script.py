@@ -35,7 +35,7 @@ streamlit.write(product_caption)
 
 
 # use the option selected to go back and get all the info from the database
-my_cur.execute("select direct_url, price, size_list, upsell_product_desc from catalog_for_website where color_or_style = '" + option1 + "';")
+my_cur.execute("select direct_url, price, size_list, upsell_product_desc from catalog_for_website where color_or_style = '" + option + "';")
                
 #my_cur.execute("select direct_url, price, size_list, upsell_product_desc from catalog_for_website where
 #color_or_style = '" + option1 + "';")
