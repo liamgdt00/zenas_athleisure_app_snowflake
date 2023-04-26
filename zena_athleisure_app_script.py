@@ -24,7 +24,7 @@ color_list = df[0].values.tolist()
 
 
 # Let's put a pick list here so they can pick the color
-option = streamlit.selectbox('Pick a sweatsuit color or style:', list(color_list))
+option = streamlit.selectbox('Pick a sweatsuit color or style:', color_list)
 streamlit.write(option)
 #option1 = streamlit.selectbox('Pick a sweatsuit color or style:', list(color_list))
 
@@ -40,7 +40,8 @@ color_or_style = '" + option + "';""")
 #color_or_style = '" + option1 + "';")
                
 df2 = my_cur.fetchone()
-               
+streamlit.write(df2)
+
 streamlit.image(df2[0],width=400,caption= product_caption)
 #streamlit.image(df2[0],width=400,caption= product_caption1)
 streamlit.write('Price: ', df2[1])
