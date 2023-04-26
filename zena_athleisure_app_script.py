@@ -33,6 +33,7 @@ streamlit.write(option)
 # We'll build the image caption now, since we can
 product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
 #product_caption1 = 'Our warm, comfortable, ' + option1 + ' sweatsuit!'
+streamlit.write(product_caption)
 
 # use the option selected to go back and get all the info from the database
 my_cur.execute("""select direct_url, price, size_list, upsell_product_desc from catalog_for_website where
